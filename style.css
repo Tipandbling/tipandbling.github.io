@@ -8,7 +8,12 @@ body {
        max-width: 1450px;       
        height: auto;           
        min-height: 80px;
-       background: transparent;
+       background: linear-gradient(
+        to right,
+    #ff6fa5,   /* pink */
+    #9b5de5    /* purple */
+
+  );
        display: flex;
        align-items: center;
        justify-content: space-between;
@@ -39,7 +44,7 @@ body {
       font-weight: 600;
       font-size: 20px;
       transition: 0.3s;
-       background: linear-gradient(135deg, #6a5acd, #ffffff);
+       background: linear-gradient(135deg, #ff6fa5, #9b5de5);
       color: white;
       padding: 14px 32px;
       font-size:10px;
@@ -90,7 +95,7 @@ body {
     }
      .card {
       flex: 0 0 auto; 
-      background: #fff;
+      background: linear-gradient(135deg, #ff6fa5, #9b5de5);
       border: 1px solid #ddd;
       border-radius: 10px;
       width: 250px;
@@ -123,7 +128,7 @@ body {
     }
 
     .buy-btn {
-      background: linear-gradient(135deg, #6a5acd, #ffffff);
+       background: linear-gradient(135deg, #ff6fa5, #d4af37);
       color: white;
       border: none;
       padding: 10px 15px;
@@ -133,10 +138,10 @@ body {
     }
 
     .buy-btn:hover {
-      background: linear-gradient(135deg, #6a5acd, #ffffff);
+      background: linear-gradient(135deg, #ff6fa5, #d4af37);
     }
     .button{
-       background: linear-gradient(135deg, #6a5acd, #ffffff);
+       background: linear-gradient(135deg, #ff6fa5, #d4af37);
       color: white;
       padding: 14px 32px;
       font-size: 18px;
@@ -150,7 +155,7 @@ body {
 
     }
     button:hover {
-      background: linear-gradient(135deg, #6a5acd, #ffffff);
+      background: linear-gradient(135deg, #ff6fa5, #d4af37);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transform: translateY(-3px);
     }
@@ -191,7 +196,68 @@ body {
       font-style: italic;
 
     }
-    .contact {
+    .video-section {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.video-section h2 {
+  font-size: 32px;
+  color: #7b2cff;
+  margin-bottom: 10px;
+}
+
+.video-subtext {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.video-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);}
+
+.contact {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid #ffffff;
   border-radius: 20px;
@@ -268,21 +334,7 @@ body {
   border: 2px solid #6a5acd;
 }
 
-#loginBtn {
-  background: linear-gradient(135deg, #6a5acd, #ffffff);
-  color: white;
-  padding: 12px;
-  border-radius: 50px;
-  width: 100%;
-  border: none;
-  margin-top: 10px;
-  cursor: pointer;
-}
 
-#loginMessage {
-  margin-top: 15px;
-  font-weight: bold;
-}
 
 .footer {
      display: flex;
@@ -366,3 +418,4 @@ body {
     font-size: 1rem;
   }
 }
+
