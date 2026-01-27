@@ -1,4 +1,4 @@
-function toggleMenu() {
+ function toggleMenu() {
     document.getElementById("menu").classList.toggle("show");
   }
   $(document).ready(function () {
@@ -9,23 +9,6 @@ function toggleMenu() {
     });
   });
 });
-
-$("#loginBtn").click(function () {
-  let email = $("#loginEmail").val();
-  let password = $("#loginPassword").val();
-
-  if (email === "" || password === "") {
-    $("#loginMessage").text("All fields are required!").css("color", "red");
-  } 
-  else if (!email.includes("@")) {
-    $("#loginMessage").text("Enter a valid email address!").css("color", "red");
-  } 
-  else {
-    $("#loginMessage").text("Login Successful!").css("color", "green");
-  }
-});
-
-
 let container = document.querySelector(".slider-container");
 let scrollAmount = 0;
 
@@ -42,6 +25,40 @@ if (container) {
         }
     }, 2000); 
 }
+window.addEventListener("load", () => {
+  document.querySelector(".fade-in").classList.add("show");
+});
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+  const triggerPoint = window.innerHeight - 100;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+    if (cardTop < triggerPoint) {
+      card.classList.add("show");
+    }
+  });
+});
+const videoCards = document.querySelectorAll(".video-card");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight - 100;
+
+  videoCards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < trigger) {
+      card.classList.add("show");
+    }
+  });
+});
+document.querySelectorAll(".video-card video").forEach(video => {
+  video.addEventListener("mouseenter", () => video.play());
+  video.addEventListener("mouseleave", () => video.pause());
+});
 
 
 
