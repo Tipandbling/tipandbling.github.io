@@ -25,24 +25,6 @@ if (container) {
         }
     }, 2000); 
 }
-window.addEventListener("load", () => {
-  document.querySelector(".fade-in").classList.add("show");
-});
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("show");
-}
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-  const triggerPoint = window.innerHeight - 100;
-
-  cards.forEach(card => {
-    const cardTop = card.getBoundingClientRect().top;
-    if (cardTop < triggerPoint) {
-      card.classList.add("show");
-    }
-  });
-});
 const videoCards = document.querySelectorAll(".video-card");
 
 window.addEventListener("scroll", () => {
@@ -59,6 +41,7 @@ document.querySelectorAll(".video-card video").forEach(video => {
   video.addEventListener("mouseenter", () => video.play());
   video.addEventListener("mouseleave", () => video.pause());
 });
+
 
 
 
