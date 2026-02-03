@@ -1,6 +1,6 @@
 body {
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('ai.jpg');
+      background: transparent;
     }
     
    .navbar {
@@ -436,6 +436,7 @@ body {
     font-size: 1rem;
   }
 }
+
 
 
 
