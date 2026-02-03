@@ -332,17 +332,39 @@ body {
 
 
 
-.footer {
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    background-color: #f2f2f2;
-    border-radius: 50px;   
-    margin: 20px;  
-    flex-wrap: wrap; 
-    background: transparent;
-    }
+.footer-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 25px;
+
+    padding: 15px 30px;
+    border-radius: 30px;
+
+    /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Nav Items */
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 20px;
+
+    transition: all 0.3s ease;
+}
+
 .menu-toggle {
   display: none;
   font-size: 30px;
@@ -414,5 +436,6 @@ body {
     font-size: 1rem;
   }
 }
+
 
 
